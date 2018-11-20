@@ -5,14 +5,40 @@
 
     <groupId>com.allin</groupId>
     <artifactId>all-in</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
+
+    <description>all-in</description>
+    <properties>
+        <project.name>all-in</project.name>
+        <project.name.web>all-in-web</project.name.web>
+        <project.name.eureka-server>eureka-server</project.name.eureka-server>
+        <project.common>all-in-common</project.common>
+
+        <java.version>1.8</java.version>
+        <springcloud.version>Finchley.SR1</springcloud.version>
+        <springboot.version>2.0.4.RELEASE</springboot.version>
+        <kafka.version></kafka.version>
+        <zookeeper.version></zookeeper.version>
+        <slf4j.version></slf4j.version>
+        <log4j2.version></log4j2.version>
+        <redis.version></redis.version>
+        <druid.version></druid.version>
+        <fastjson.version></fastjson.version>
+
+
+        <java.encoding>UTF-8</java.encoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+
     <modules>
-        <module>all-in-common</module>
+		<module>all-in-common</module>
+        <module>eureka-server</module>
     </modules>
     <packaging>pom</packaging>
 
     <name>all-in</name>
-    <description>Demo project for Spring Boot</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,24 +47,14 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-    </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
+    <dependencyManagement>
+        <dependencies>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+
+
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
