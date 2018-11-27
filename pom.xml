@@ -6,6 +6,7 @@
     <groupId>com.allin</groupId>
     <artifactId>all-in</artifactId>
     <version>1.0.0</version>
+    <packaging>pom</packaging>
 
     <description>all-in</description>
     <properties>
@@ -14,9 +15,13 @@
         <project.name.eureka-server>eureka-server</project.name.eureka-server>
         <project.common>all-in-common</project.common>
 
+        <all-in-common.version>1.0.0</all-in-common.version>
+        <all-in-core.version></all-in-core.version>
+
         <java.version>1.8</java.version>
-        <springcloud.version>Finchley.SR1</springcloud.version>
-        <springboot.version>2.0.4.RELEASE</springboot.version>
+        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+        <springboot.version>2.0.3.RELEASE</springboot.version>
+
         <kafka.version></kafka.version>
         <zookeeper.version></zookeeper.version>
         <slf4j.version></slf4j.version>
@@ -36,23 +41,40 @@
 		<module>all-in-common</module>
         <module>eureka-server</module>
     </modules>
-    <packaging>pom</packaging>
 
     <name>all-in</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.0.RELEASE</version>
+        <version>2.0.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
 
+            <dependency>
+                <groupId>com.allin</groupId>
+                <artifactId>all-in-common</artifactId>
+                <version>${all-in-common.version}</version>
+            </dependency>
 
-
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
