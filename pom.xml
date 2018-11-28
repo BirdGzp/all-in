@@ -35,7 +35,7 @@
         <log4j2.version></log4j2.version>
         <redis.version></redis.version>
         <druid.version></druid.version>
-        <fastjson.version></fastjson.version>
+        <fastjson.version>1.2.53</fastjson.version>
 
 
         <java.encoding>UTF-8</java.encoding>
@@ -79,10 +79,11 @@
             </dependency>
 
             <dependency>
-                <groupId>com.allin</groupId>
-                <artifactId>all-in-common</artifactId>
-                <version>${all-in-common.version}</version>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
+
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -100,7 +101,23 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
+
     </build>
 
 
