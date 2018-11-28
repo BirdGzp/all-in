@@ -5,16 +5,16 @@
 
     <groupId>com.all-in</groupId>
     <artifactId>eureka-server</artifactId>
-    <version>1.0.0</version>
+    <version>${eureka-server.version}</version>
     <packaging>jar</packaging>
 
     <name>eureka-server</name>
-    <description>Demo project for Spring Boot</description>
+
 
     <parent>
         <groupId>com.allin</groupId>
         <artifactId>all-in</artifactId>
-        <version>1.0.0</version>
+        <version>${all-in.version}</version>
     </parent>
 
 
