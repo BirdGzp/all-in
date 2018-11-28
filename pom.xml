@@ -5,7 +5,7 @@
 
     <groupId>com.allin</groupId>
     <artifactId>all-in</artifactId>
-    <version>1.0.0</version>
+    <version>${all-in.version}</version>
     <packaging>pom</packaging>
 
     <description>all-in</description>
@@ -14,9 +14,16 @@
         <project.name.web>all-in-web</project.name.web>
         <project.name.eureka-server>eureka-server</project.name.eureka-server>
         <project.common>all-in-common</project.common>
+        <project.gateway>all-in-gateway</project.gateway>
+        <project.config>all-in-config</project.config>
 
+        <all-in.version>1.0.0</all-in.version>
         <all-in-common.version>1.0.0</all-in-common.version>
-        <all-in-core.version></all-in-core.version>
+        <all-in-core.version>1.0.0</all-in-core.version>
+        <all-in-gateway.version>1.0.0</all-in-gateway.version>
+        <all-in-web.version>1.0.0</all-in-web.version>
+        <eureka-server.version>1.0.0</eureka-server.version>
+        <all-in-config.version>1.0.0</all-in-config.version>
 
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
@@ -40,6 +47,9 @@
     <modules>
 		<module>all-in-common</module>
         <module>eureka-server</module>
+        <module>all-in-gateway</module>
+        <module>all-in-web</module>
+        <module>all-in-core</module>
     </modules>
 
     <name>all-in</name>
@@ -48,7 +58,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.3.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
     <dependencies>
@@ -61,6 +71,12 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>com.allin</groupId>
+                <artifactId>all-in-common</artifactId>
+                <version>${all-in-common.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.allin</groupId>

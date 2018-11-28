@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.allin</groupId>
-    <artifactId>all-in-core</artifactId>
-    <version>${all-in-core.version}</version>
+    <artifactId>all-in-config</artifactId>
+    <version>${all-in-config.version}</version>
     <packaging>jar</packaging>
 
-    <name>all-in-core</name>
+    <name>all-in-config</name>
 
     <parent>
         <groupId>com.allin</groupId>
@@ -16,20 +16,14 @@
         <version>${all-in.version}</version>
     </parent>
 
-
     <dependencies>
-
-        <dependency>
-            <groupId>com.allin</groupId>
-            <artifactId>all-in-common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
     </dependencies>
 

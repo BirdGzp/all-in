@@ -5,12 +5,15 @@
     <parent>
         <groupId>com.allin</groupId>
         <artifactId>all-in</artifactId>
-        <version>1.0.0</version>
+        <version>${all-in.version}</version>
     </parent>
-    <packaging>jar</packaging>
-    <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.allin</groupId>
     <artifactId>all-in-common</artifactId>
+    <version>${all-in-common.version}</version>
+    <packaging>jar</packaging>
+
+    <modelVersion>4.0.0</modelVersion>
 
 
 </project>
